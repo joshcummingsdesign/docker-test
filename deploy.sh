@@ -18,8 +18,8 @@ function docker-cleanup {
   fi
 }
 
-docker-cleanup && \
 docker stop docker-test && \
 docker rm docker-test && \
 docker pull joshcummingsdesign/docker-test && \
-docker run --name docker-test -d -p 80:80 joshcummingsdesign/docker-test
+docker run --name docker-test -d -p 80:80 joshcummingsdesign/docker-test && \
+docker-cleanup
