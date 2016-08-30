@@ -1,16 +1,20 @@
 language: node_js
 node_js:
-  - "node"
+- node
 sudo: required
 services:
-  - docker
+- docker
 addons:
   ssh_known_hosts:
   - 104.236.185.217
 before_install:
-  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker build -t joshcummingsdesign/docker-test .
-  - docker push joshcummingsdesign/docker-test
+- openssl aes-256-cbc -K $encrypted_c7c9d05a731b_key -iv $encrypted_c7c9d05a731b_iv
+  -in deploy_key.enc -out deploy_key -d
+- docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- docker build -t joshcummingsdesign/docker-test .
+- docker push joshcummingsdesign/docker-test
 after_success:
-  - git remote add staging root@104.236.185.217:staging.git
-  - git push staging master
+- chmod 600 deploy-key
+- mv deploy-key ~/.ssh/id_rsa
+- git remote add staging root@104.236.185.217:staging.git
+- git push staging master
