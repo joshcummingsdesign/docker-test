@@ -1,2 +1,2 @@
 # Docker Test
-A little practice with Docker.
+A little practice with Docker and Travis CI.
