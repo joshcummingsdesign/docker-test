@@ -21,5 +21,9 @@
 ## How it works
 * Any push to master branch in GitHub generates a build that deploys to DO droplet
 
+## Testing
+* Todo: Build error handling
+* Todo: Write Makefile tests
+
 ## Security
  * Todo: Heighten security in DO image
