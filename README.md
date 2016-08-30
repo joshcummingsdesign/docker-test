@@ -9,11 +9,12 @@
 6. Created a `.travis.yml` file (todo: modify for WordPress build)
 7. Created a `Makefile` with a test command (todo: run actual tests)
 8. Created a DigitalOcean droplet using the docker/ubuntu14.04 image (todo: make our own image)
-9. Added droplet IP address to `.travis.yml` known hosts (todo: find a way to automate this a bit more)
+9. Added droplet IP address to `.travis.yml` file (todo: find a way to automate this a bit more)
 10. Copied the contents of `deploy.sh` to a post-receive hook on the server (todo: include in DO image)
 11. Copied ssh key to the server (todo: include in DO image)
 12. Copied a generic passwordless private key in named `deploy-key` and ran `travis encrypt-file deploy-key --add` to generate the `deploy-key.env` file and removed `deploy-key` after encryption
 13. Copied the public key that matches the passwordless private key that has been encrypted in `deploy-key.env` to the server (todo: include in DO image)
+14. Run `docker run --name docker-test -d -p 80:80 joshcummingsdesign/docker-test` on the server the first time to get things going (todo: edit script to do this automatically)
 
 ## How it works
 * Any push to master branch in GitHub generates a build that deploys to DO droplet

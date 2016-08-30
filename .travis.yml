@@ -17,5 +17,5 @@ before_install:
 after_success:
 - chmod 600 deploy-key
 - mv deploy-key ~/.ssh/id_rsa
-- git remote add staging root@104.236.185.217:staging.git
+- git remote add staging root@198.199.115.172:staging.git
 - git push staging master
