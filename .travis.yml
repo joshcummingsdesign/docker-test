@@ -9,4 +9,5 @@ before_install:
   - docker build -t joshcummingsdesign/docker-test .
   - docker push joshcummingsdesign/docker-test
 after_success:
+  - git remote add staging root@104.236.185.217:staging.git
   - git remote -v
