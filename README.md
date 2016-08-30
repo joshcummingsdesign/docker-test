@@ -1,5 +1,7 @@
 # Docker Test
 
+[![Build Status](https://travis-ci.org/joshcummingsdesign/docker-test.svg?branch=master)](https://travis-ci.org/joshcummingsdesign/docker-test)
+
 ## A list of steps used to build this:
 1. Installed Docker Toolbox for local development (todo: test local development)
 2. Created a super-simple nginx config and Dockerfile (todo: make for WordPress build)
