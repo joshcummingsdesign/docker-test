@@ -9,4 +9,4 @@ before_install:
   - docker build -t joshcummingsdesign/docker-test .
   - docker push joshcummingsdesign/docker-test
 after_success:
-  - git push staging master
+  - git remote -v
