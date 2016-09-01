@@ -27,3 +27,4 @@
 
 ## Security
  * Todo: Heighten security in DO image
+ * Todo: Hide server info (for wappalyzer and the like)
